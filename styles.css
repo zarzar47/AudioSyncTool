@@ -22,3 +22,13 @@ body {
     display: none;
 }
 
+#mutebtn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+    background-color: rgb(46, 44, 44);
+    color: white;
+    font-weight: lighter;
+    font-size: small;
+}
+

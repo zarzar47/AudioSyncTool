@@ -1,10 +1,10 @@
 const colors = ['Tomato','DodgerBlue','MediumSeaGreen']; 
 const colorsName = ['Red','Blue','Green'];
-const audio = []
 let index = 0;
 const text = document.getElementById('text');
 const clicks = document.getElementById('clicks');
 let clicksNum = 0;
+let volume = 1;
 
 text.addEventListener('click', function colorChange(){
     index = (index+1)%colors.length;
@@ -16,7 +16,7 @@ text.addEventListener('click', function colorChange(){
 })
 
 function speakColor(color){
-    var audio = null;
+    var audio = new Audio();
     switch(color){
         case 'Red':
             audio = document.getElementById('red-audio');
@@ -29,8 +29,18 @@ function speakColor(color){
             break;
         default:
     }
-
+    audio.volume = volume;
     if (audio != null)
         audio.play();
 }
 
+function changeVol(){
+    if (volume==1){
+        volume=0;
+        document.getElementById("mutebtn").innerHTML = "Unmute Audio";
+    }
+    else {
+        document.getElementById("mutebtn").innerHTML = "Mute Audio";
+        volume=1;
+    }
+}
