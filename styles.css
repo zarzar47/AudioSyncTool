@@ -1,0 +1,24 @@
+body {
+    margin: 0px;
+    min-height: 100vh;
+}
+
+#main_window{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    background-color: tomato;
+}
+
+#text {
+    margin: auto;
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+}
+
+#audios{
+    display: none;
+}
+
